@@ -1,0 +1,70 @@
+Jul 23 11:48:15 FSI-DC1-RFLNXDT systemd[1]: Starting xrdp.service - xrdp daemon...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit xrdp.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit xrdp.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 7730.[0m
+Jul 23 11:48:15 FSI-DC1-RFLNXDT xrdp[235199]: [INFO ] address [0.0.0.0] port [3389] mode 1
+Jul 23 11:48:15 FSI-DC1-RFLNXDT xrdp[235199]: [INFO ] listening to port 3389 on 0.0.0.0
+Jul 23 11:48:15 FSI-DC1-RFLNXDT xrdp[235199]: [0;1;31m[0;1;39m[0;1;31m[ERROR] g_tcp_bind(7, 3389) failed bind IPv6 (errno=98) and IPv4 (errno=22).[0m
+Jul 23 11:48:15 FSI-DC1-RFLNXDT xrdp[235199]: [0;1;31m[0;1;39m[0;1;31m[ERROR] trans_listen_address failed[0m
+Jul 23 11:48:15 FSI-DC1-RFLNXDT xrdp[235199]: [0;1;31m[0;1;39m[0;1;31m[CORE ] Failed to start xrdp daemon, possibly address already in use.[0m
+Jul 23 11:48:15 FSI-DC1-RFLNXDT systemd[1]: [0;1;39m[0;1;31m[0;1;39mxrdp.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit xrdp.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Jul 23 11:48:15 FSI-DC1-RFLNXDT systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mxrdp.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit xrdp.service has entered the 'failed' state with result 'exit-code'.[0m
+Jul 23 11:48:15 FSI-DC1-RFLNXDT systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start xrdp.service - xrdp daemon.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit xrdp.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit xrdp.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 7730 and the job result is failed.[0m
+Jul 24 12:39:52 FSI-DC1-RFLNXDT systemd[1]: Starting xrdp.service - xrdp daemon...
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit xrdp.service has begun execution[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit xrdp.service has begun execution.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 29859.[0m
+Jul 24 12:39:52 FSI-DC1-RFLNXDT xrdp[2869020]: [INFO ] address [0.0.0.0] port [3389] mode 1
+Jul 24 12:39:52 FSI-DC1-RFLNXDT xrdp[2869020]: [INFO ] listening to port 3389 on 0.0.0.0
+Jul 24 12:39:52 FSI-DC1-RFLNXDT xrdp[2869020]: [0;1;31m[0;1;39m[0;1;31m[ERROR] g_tcp_bind(7, 3389) failed bind IPv6 (errno=98) and IPv4 (errno=22).[0m
+Jul 24 12:39:52 FSI-DC1-RFLNXDT xrdp[2869020]: [0;1;31m[0;1;39m[0;1;31m[ERROR] trans_listen_address failed[0m
+Jul 24 12:39:52 FSI-DC1-RFLNXDT xrdp[2869020]: [0;1;31m[0;1;39m[0;1;31m[CORE ] Failed to start xrdp daemon, possibly address already in use.[0m
+Jul 24 12:39:52 FSI-DC1-RFLNXDT systemd[1]: [0;1;39m[0;1;31m[0;1;39mxrdp.service: Control process exited, code=exited, status=1/FAILURE[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit process exited[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mAn ExecStart= process belonging to unit xrdp.service has exited.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe process' exit code is 'exited' and its exit status is 1.[0m
+Jul 24 12:39:52 FSI-DC1-RFLNXDT systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mxrdp.service: Failed with result 'exit-code'.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: Unit failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe unit xrdp.service has entered the 'failed' state with result 'exit-code'.[0m
+Jul 24 12:39:52 FSI-DC1-RFLNXDT systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start xrdp.service - xrdp daemon.[0m
+[0;38;5;245m░░ [0m[0;32mSubject: A start job for unit xrdp.service has failed[0m
+[0;38;5;245m░░[0m [0;32mDefined-By: systemd[0m
+[0;38;5;245m░░[0m [0;32mSupport: http://www.ubuntu.com/support[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mA start job for unit xrdp.service has finished with a failure.[0m
+[0;38;5;245m░░[0m [0;32m[0m
+[0;38;5;245m░░[0m [0;32mThe job identifier is 29859 and the job result is failed.[0m
