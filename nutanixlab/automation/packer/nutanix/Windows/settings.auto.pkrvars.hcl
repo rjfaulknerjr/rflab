@@ -1,0 +1,12 @@
+nutanix_username    = "packer"
+nutanix_password    = "Sy0!sZaLh>>m[(WCQPi$"
+nutanix_insecure    = false
+nutanix_endpoint    = "10.200.0.41"
+nutanix_port = 9440
+nutanix_cluster = "FerroqueLab"
+nutanix_subnet = "V707"
+nutanix_storage_container_uuid = "609a765a-981c-4242-bc16-c639b36b967b"
+windows_11_iso_image_name = "SW_DVD_Win_Pro_11_21H2_64BIT_English.iso"
+virtio_iso_image_name = "Nutanix-VirtIO-1.2.3.iso"
+winrm_username = "Administrator"
+winrm_password = "Good4Now!"
