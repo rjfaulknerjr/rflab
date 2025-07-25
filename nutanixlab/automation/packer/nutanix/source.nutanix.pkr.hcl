@@ -10,7 +10,7 @@ source "nutanix" "centos" {
   vm_disks {
       image_type = "DISK_IMAGE"
       source_image_name = var.centos_disk_image_name
-      disk_size_gb = 40
+      disk_size_gb = 80
   }
 
   vm_nics {
@@ -56,7 +56,7 @@ source "nutanix" "ubuntu" {
   vm_disks {
     image_type = "DISK_IMAGE"
     source_image_name = var.ubuntu_disk_image_name
-    disk_size_gb = 40
+    disk_size_gb =80
   }
 
   vm_nics {
@@ -90,7 +90,7 @@ source "nutanix" "centos-kickstart" {
 
   vm_disks {
       image_type = "DISK"
-      disk_size_gb = 40
+      disk_size_gb = 80
   }
 
   vm_nics {
@@ -126,7 +126,7 @@ source "nutanix" "ubuntu-autoinstall" {
 
   vm_disks {
       image_type = "DISK"
-      disk_size_gb = 40
+      disk_size_gb = 80
   }
 
   vm_nics {
@@ -171,7 +171,7 @@ source "nutanix" "windows" {
 
   vm_disks {
       image_type = "DISK"
-      disk_size_gb = 40
+      disk_size_gb = 80
   }
 
   vm_nics {
