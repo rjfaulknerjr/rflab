@@ -1,0 +1,25 @@
+[req]
+distinguished_name = pvcm.ferroque.lab
+req_extensions = v3_req
+
+[req_distinguished_name]
+countryName = CA # Country Name (2 letter code)
+stateOrProvinceName = Ontario # State or Province Name (full name)
+localityName = Toronto # Locality Name (eg, city)
+organizationName = Ferroque Systems, Inc. # Organization Name (eg, company)
+organizationalUnitName = LAB # Organizational Unit Name (eg, BU)
+commonName = pci-dc1-lpc.ferroque.lab # Common Name (e.g. server FQDN or YOUR name)
+emailAddress = servicedesk@ferroquesystems.com # Email Address
+
+[v3_req]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.0 = pci-dc1-lpc.ferroque.lab # Primary domain or fully qualified domain name (FQDN) of the server
+DNS.1 = pci-dc1-lpc1.ferroque.lab # Secondary domain or alias for the server
+DNS.2 = pci-dc1-lpc2.ferroque.lab # Additional domain name that should be trusted
+DNS.3 = pci-dc1-lpc3.ferroque.lab # Wildcard entry to match any subdomain under domain.com
+IP.0  = 10.200.0.40 # IP address of the Prism Central
+IP.1  = 10.200.0.41 # Additional IP address of the Prism Central 
+IP.2  = 10.200.0.42
+IP.3  = 10.200.0.43
