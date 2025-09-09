@@ -1,0 +1,95 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+timezone: America/New_York
+
+users:
+  - name: nutanix
+    groups: [sudo]
+    sudo: "ALL=(ALL) NOPASSWD:ALL"
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFewHcecJTZCjDIKmWirsFeLUjAibgrM+lgW83gWSOyu eddsa-key-20250715
+    lock_passwd: false
+    passwd: $6$4guEcDvX$HBHMFKXp4x/Eutj0OW5JGC6f1toudbYs.q.WkvXGbUxUTzNcHawKRRwrPehIxSXHVc70jFOp3yb8yZgjGUuET.
+
+ssh_pwauth: false
+disable_root: true
+
+packages:
+  - apache2
+  - curl
+  - net-tools
+
+write_files:
+  - path: /etc/apache2/conf-available/hardening.conf
+    owner: root:root
+    permissions: '0644'
+    content: |
+      ServerTokens Prod
+      ServerSignature Off
+      TraceEnable Off
+      FileETag None
+      <IfModule mod_headers.c>
+        Header always set X-Frame-Options "SAMEORIGIN"
+        Header always set X-Content-Type-Options "nosniff"
+        Header always set X-XSS-Protection "1; mode=block"
+        Header set Cache-Control "no-store"
+      </IfModule>
+
+runcmd:
+  - |
+    bash -lc '
+      a2enmod headers >/dev/null 2>&1 || true
+      a2enconf hardening >/dev/null 2>&1 || true
+      systemctl enable apache2
+      systemctl restart apache2
+
+      HN=$(hostname)
+      IP=$(hostname -I | awk "{print \$1}")
+      NOW=$(date -Is)
+
+      # health check
+      echo -n OK > /var/www/html/healthz
+      chmod 644 /var/www/html/healthz
+
+      # status
+      cat >/var/www/html/status.json <<JSON
+      {
+        "hostname": "$HN",
+        "ip": "$IP",
+        "time": "$NOW",
+        "service": "apache2",
+        "health": "OK"
+      }
+      JSON
+      chmod 644 /var/www/html/status.json
+
+      # hello world
+      cat >/var/www/html/hello.html <<EOF
+      <!doctype html><html><body><h1>Hello World</h1></body></html>
+      EOF
+      chmod 644 /var/www/html/hello.html
+
+      # landing
+      cat >/var/www/html/index.html <<EOF
+      <!doctype html>
+      <html lang="en">
+      <head><meta charset="utf-8"><title>Demo Backend - $HN</title></head>
+      <body>
+        <h1>NetScaler Demo Backend</h1>
+        <p><strong>Hostname:</strong> $HN</p>
+        <p><strong>IP:</strong> $IP</p>
+        <p><strong>Time:</strong> $NOW</p>
+        <p><a href="/healthz">/healthz</a> | <a href="/status.json">/status.json</a> | <a href="/hello.html">/hello.html</a></p>
+      </body>
+      </html>
+      EOF
+      chmod 644 /var/www/html/index.html
+
+      apache2ctl configtest || true
+      systemctl restart apache2
+    '
+
+final_message: |
+  ✔ Cloud-init completed. Apache is running.
+  Endpoints: /healthz, /status.json, /hello.html

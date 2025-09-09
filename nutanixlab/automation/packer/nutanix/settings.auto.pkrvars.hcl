@@ -1,0 +1,13 @@
+nutanix_username    = "packer"
+nutanix_password    = "Sy0!sZaLh>>m[(WCQPi$"
+nutanix_insecure    = true
+nutanix_endpoint    = "10.200.0.41"
+nutanix_port = 9440
+nutanix_cluster = "FerroqueLab"
+nutanix_subnet = "V707"
+centos_iso_image_name = "CentOS-Stream-10-latest-x86_64-dvd1.iso"
+centos_disk_image_name =  "CentOS-Stream-GenericCloud-x86_64-10-latest.x86_64.qcow2"
+ubuntu_disk_image_name = "ubuntu-24.04-server-cloudimg-amd64.img"
+ubuntu_iso_image_name = "ubuntu-24.04.2-live-server-amd64.iso"
+windows_2016_iso_image_name = "SW_DVD9_Wn_Server_STD_CORE_2022_2108.14_64Bit_English.ISO"
+virtio_iso_image_name = "Nutanix-VirtIO-1.2.3.iso"
